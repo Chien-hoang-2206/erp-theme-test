@@ -3,7 +3,7 @@ name: Node.js Package
 on:
   push:
     branches:
-      - master
+      - main
 
 jobs:
   publish-gpr:
@@ -16,6 +16,6 @@ jobs:
           registry-url: https://npm.pkg.github.com/
           scope: '@chien-hoang-2206'
       - run: npm install
-      - run: npm publish
+      - run: npm publish --@chien-hoang-2206:registry=https://npm.pkg.github.com/
         env:
-          NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
+          NODE_AUTH_TOKEN: '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'
